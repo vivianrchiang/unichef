@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ImageBackground, View, Text, StyleSheet, TouchableOpacity, TextInput, Platform } from 'react-native';
 
-const API_URL = Platform.OS === 'ios' ? 'http://localhost:5000' : 'http://10.0.2.2:5000';
+const API_URL = Platform.OS === 'web' ? 'http://localhost:19007' : 'http://localhost:19007';
 
 const AuthScreen = () => {
 
@@ -15,7 +15,7 @@ const AuthScreen = () => {
 
     const onChangeHandler = () => {
         setIsLogin(!isLogin);
-        setMessage('');
+        setMessage('HI');
     };
 
     const onLoggedIn = token => {
