@@ -1,0 +1,1 @@
+{"ast":null,"code":"import AuthScreen from \"./AuthScreen\";\nexport { AuthScreen };","map":{"version":3,"sources":["C:/Users/Admin/Documents/unichef/frontend/screens/index.js"],"names":["AuthScreen"],"mappings":"AAAA,OAAOA,UAAP;AAEA,SAASA,UAAT","sourcesContent":["import AuthScreen from './AuthScreen';\r\n\r\nexport { AuthScreen };"]},"metadata":{},"sourceType":"module"}

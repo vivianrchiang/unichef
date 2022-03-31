@@ -48,9 +48,12 @@ export default function KirbyRecipesScreen({ navigation }: RootTabScreenProps<'T
       
       </View>
 
-      <TouchableOpacity style={styles.buttonContainer2}>
+      <TouchableOpacity style={styles.buttonContainer2}
+                onPress={() => navigation.navigate('CreateRecipePost')}
+                >
+
                 <Text style={styles.appButtonText}>Create Recipe Post</Text>
-              </TouchableOpacity> 
+              </TouchableOpacity>  
 
     </View>
       
