@@ -140,7 +140,7 @@ const AuthScreen = () => {
 
 
     return (
-        <ImageBackground source={require('../public/images/gradient-back.jpeg')} style={styles.image}>
+        <ImageBackground source={{uri: 'https://wallpapercave.com/wp/wp8279629.jpg',}} style={styles.image}>
             <View style={styles.card}>
                 <Text style={styles.heading}>{isLogin ? 'Unichef Login' : 'Unichef Signup'}</Text>
                 <View style={styles.form}>
@@ -172,16 +172,18 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         width: '100%',
+        height: '100%',
         alignItems: 'center',
     },  
     card: {
         flex: 1,
-        backgroundColor: 'rgba(255, 255, 255, 0.4)',
+        backgroundColor: 'rgba(255, 255, 255, 0.6)',
         width: '80%',
-        marginTop: '40%',
+        marginTop: '5%',
+        marginBottom: '20%',
         borderRadius: 20,
-        maxHeight: 380,
-        paddingBottom: '30%',
+        maxHeight: 500,
+        paddingBottom: '10%',
     },
     heading: {
         fontSize: 30,

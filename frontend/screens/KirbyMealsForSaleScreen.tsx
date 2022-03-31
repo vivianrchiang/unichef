@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, ScrollView, TouchableOpacity, Image} from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -19,8 +19,12 @@ export default function KirbyMealsForSaleScreen() {
       <View style={styles.RectangleShapeView2}> 
         <Text style={styles.foodTitle}> Dumplings </Text>  
         <Text style={styles.prices}> {"\n"}  10 for $20 {"\n"} 20 for $25 {"\n"} 30 for $30  {"\n"} </Text>  
-        <img src="https://static.onecms.io/wp-content/uploads/sites/44/2021/07/21/steamed-vegetable-dumplings-recipe.jpg" alt="Dumplings" 
-       className = "center" width="250" height="300"></img>
+        <Image style={styles.imgView}
+        source={{
+          uri: 'https://static.onecms.io/wp-content/uploads/sites/44/2021/07/21/steamed-vegetable-dumplings-recipe.jpg',
+        }}
+      />
+       
         <Text style={styles.body}> {"\n"} Fresh homemade dumplings! Made from scratch using a recipe
         passed down among generations in my family, these dumplings will not disappoint. Vegan and gluten-free
         substitutes available. {"\n"} </Text>  
@@ -32,8 +36,11 @@ export default function KirbyMealsForSaleScreen() {
        <View style={styles.RectangleShapeView2}> 
         <Text style={styles.foodTitle}> Egg Tarts </Text>  
         <Text style={styles.prices}> {"\n"}  1 for $1.75 {"\n"} 5 for $7.50 {"\n"} 10 for $10  {"\n"} </Text>  
-        <img src="https://img.buzzfeed.com/video-api-prod/assets/18da0a2f7c65489abdaaa1767aba847a/BFV6265_EggTart_FB_Thumbnail.jpg" alt="Dumplings" 
-       className = "center" width="250" height="300"></img>
+        <Image style={styles.imgView}
+        source={{
+          uri: 'https://img.buzzfeed.com/video-api-prod/assets/18da0a2f7c65489abdaaa1767aba847a/BFV6265_EggTart_FB_Thumbnail.jpg',
+        }}
+      />
         <Text style={styles.body}> {"\n"} Hong Kong style egg tarts that are made fresh daily. A popular
         dessert choice and my best seller by far. Indulge in this delicious delicacy after a hearty meal
         or with coffee! {"\n"} </Text>  
@@ -152,6 +159,12 @@ RectangleShapeView: {
     borderRadius:30,
     alignSelf: 'center',
     backgroundColor: "#EE4B2B",
+  },
+  imgView:{
+    alignSelf: 'center',
+    display: 'flex',
+    height: 300,
+    width: 250,
   },
 
   appButtonText: {

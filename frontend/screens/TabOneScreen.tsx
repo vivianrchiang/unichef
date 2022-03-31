@@ -307,8 +307,11 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
       <Text style={styles.general}> Cook time: 30 minutes </Text>{"\n"}
-        <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
-       className = "center" width="250" height="300" className="center"></img>
+      <Image style={styles.imgView}
+        source={{
+          uri: 'https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg',
+        }}
+      />
 
 {"\n"}
               {"\n"}
@@ -340,8 +343,11 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Grilled Cheese </Text> {"\n"}
       <Text style={styles.general}> Cook time: 5 minutes </Text>{"\n"}
-      <img src="https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-SQ.jpg" alt="Veggie Fried Rice" 
-      width="250" height="300" className="center"></img>
+      <Image style={styles.imgView}
+        source={{
+          uri: 'https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-SQ.jpg',
+        }}
+      />
 
       {"\n"}
       {"\n"}
@@ -368,8 +374,12 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Teriyaki Stir Fry </Text> {"\n"}
         <Text style={styles.general}> Cook time: 40 minutes </Text>{"\n"}
-        <img src="https://www.connoisseurusveg.com/wp-content/uploads/2018/12/teriyaki-tofu-5-of-5.jpg" alt="Veggie Fried Rice" 
-        width="250" height="300" className="center"></img>
+        <Image style={styles.imgView}
+        source={{
+          uri: 'https://www.connoisseurusveg.com/wp-content/uploads/2018/12/teriyaki-tofu-5-of-5.jpg',
+        }}
+      />
+        
 
         {"\n"}
         {"\n"}
@@ -395,8 +405,11 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Fetuccine Alfredo Pasta </Text> {"\n"}
         <Text style={styles.general}> Cook time: 25 minutes </Text>{"\n"}
-        <img src="https://www.seannaskitchen.com/wp-content/uploads/2021/11/Alfredo-Hero-2-1.jpg" alt="Veggie Fried Rice" 
-        width="250" height="300"></img>
+        <Image style={styles.imgView}
+        source={{
+          uri: 'https://www.seannaskitchen.com/wp-content/uploads/2021/11/Alfredo-Hero-2-1.jpg',
+        }}
+      />
 
         {"\n"}
         {"\n"}
@@ -513,6 +526,13 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
 
+  imgView:{
+    alignSelf: 'center',
+    display: 'flex',
+    height: 300,
+    width: 250,
+  },
+
   buttonContainer: {
     marginTop: 10,
     height:45,
@@ -538,6 +558,7 @@ const styles = StyleSheet.create({
  
   },
  
+  
   RectangleShapeView: {
  
     marginTop: 20,
@@ -546,7 +567,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#CCCCFF'
  
-  }
+  },
+
   
+ 
 
 });

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, ScrollView, TouchableOpacity, Image} from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -20,8 +20,11 @@ export default function KirbyRecipesScreen({ navigation }: RootTabScreenProps<'T
       <View style={styles.RectangleShapeView2}> 
       <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
       <Text style={styles.general}> Cook time: 30 minutes </Text> {"\n"}
-        <img src="https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg" alt="Veggie Fried Rice" 
-       className = "center" width="250" height="300"></img>
+      <Image style={styles.imgView}
+        source={{
+          uri: 'https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg',
+        }}
+      />
 
 {"\n"}
               {"\n"}
@@ -95,6 +98,12 @@ const styles = StyleSheet.create({
 header:{
   backgroundColor: "#00008b",
   height: 180,
+},
+imgView:{
+  alignSelf: 'center',
+  display: 'flex',
+  height: 300,
+  width: 250,
 },
 
 RectangleShapeView: {
