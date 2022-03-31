@@ -28,16 +28,49 @@ export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabOne'
             <View>
                 <View style={{flexDirection:"row"}}>
                     <View style={{flex:1}}>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Acme_Fresh_Market.jpg" alt="ACME" 
-      width="400" height="250" style={{justifyContent: 'flex-start',}} ></img>{"\n"} {"\n"}
+                      <img src="https://i.pinimg.com/originals/6f/3b/71/6f3b71075667949114b817ec0d77f24d.jpg" alt="cupcakes" 
+      width="400" height="250" style={{justifyContent: 'flex-start',     flexDirection: 'row',
+      alignSelf: 'center',}} ></img>
+            <Text style={styles.title1}>Chocolate Muffins with cream cheese frosting. 30 min ago. </Text>
+            <Text style={styles.title1}>Cost: 2$/muffin</Text>
+            <Text style={styles.title1}>Location: Philadelphia, PA.</Text>
+            <TouchableOpacity style={styles.buttonContainer1}
+                onPress={() => navigation.navigate('VeggieFriedRice')}
+                >
+
+                <Text style={styles.appButtonText}>Contact Seller</Text>
+              </TouchableOpacity>  
+
+
+      {"\n"} {"\n"}
                     </View>
                     <View style={{flex:1}}>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Taco_Truck_St_Louis_MO.jpg" alt="tacos" 
-      width="400" height="250" style={{justifyContent: 'flex-start',}}></img>{"\n"} {"\n"}
+                      <img src="https://www.kitchensanctuary.com/wp-content/uploads/2020/04/Vegetable-Pasta-Bake-Square-FS-19.jpg" alt="Pasta" 
+         width="350" height="250" style={{justifyContent: 'flex-start',     flexDirection: 'row',
+         alignSelf: 'center',}}></img>
+                     <Text style={styles.title1}>Rigatoni with Vodka Pasta Sauce. 43 min ago. </Text>
+            <Text style={styles.title1}>Cost: 5$/serving/</Text>
+            <Text style={styles.title1}>Location: Philadelphia, PA.</Text>
+            <TouchableOpacity style={styles.buttonContainer1}
+                onPress={() => navigation.navigate('VeggieFriedRice')}
+                >
+
+                <Text style={styles.appButtonText}>Contact Seller</Text>
+              </TouchableOpacity> {"\n"} {"\n"}
                     </View>
                     <View style={{flex:1}}>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Asian_Street_Food_Vendor_%28Unsplash%29.jpg" alt="food" 
-      width="400" height="250" style={{justifyContent: 'flex-start',}}></img>{"\n"} {"\n"}
+                      <img src="https://www.bakingkneads.com/wp-content/uploads/2019/03/123-Macarons.jpg" alt="Macarons" 
+    width="400" height="250" style={{justifyContent: 'flex-start',     flexDirection: 'row',
+    alignSelf: 'center',}}></img>
+                <Text style={styles.title1}>Flavored Macarons. 1 hr ago. </Text>
+            <Text style={styles.title1}>Cost: 3$/macaron</Text>
+            <Text style={styles.title1}>Location: Philadelphia, PA.</Text>
+            <TouchableOpacity style={styles.buttonContainer1}
+                onPress={() => navigation.navigate('VeggieFriedRice')}
+                >
+
+                <Text style={styles.appButtonText}>Contact Seller</Text>
+              </TouchableOpacity> {"\n"} {"\n"}
                     </View>
                 </View>
          
@@ -64,6 +97,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center'
   },
+  title1: {
+    justifyContent: 'center',
+    alignSelf: 'center'
+  },
   buttonContainer: {
     marginTop: 10,
     height:45,
@@ -74,6 +111,17 @@ const styles = StyleSheet.create({
     width:250,
     borderRadius:30,
     backgroundColor: "#00008b",
+  },
+  buttonContainer1: {
+    marginTop: 10,
+    height:45,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginBottom:20,
+    width:250,
+    borderRadius:30,
+    backgroundColor: "#0FA973",
   },
   separator: {
     marginVertical: 30,
