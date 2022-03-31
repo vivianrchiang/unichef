@@ -267,6 +267,7 @@
  import KirbyRecipesScreen from '../screens/KirbyRecipesScreen';
  import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
  import LinkingConfiguration from './LinkingConfiguration';
+import CreateRecipePostScreen from '../screens/CreateRecipePostScreen';
  
  export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
    return (
@@ -293,6 +294,7 @@
        <Stack.Screen name="VeggieFriedRiceReviews" component={VeggieFriedRiceReviewsScreen} />
        <Stack.Screen name="KirbyMealsForSale" component={KirbyMealsForSaleScreen} />
        <Stack.Screen name="KirbyRecipes" component={KirbyRecipesScreen} />
+       <Stack.Screen name="CreateRecipePost" component={CreateRecipePostScreen} />
        <Stack.Group screenOptions={{ presentation: 'modal' }}>
          <Stack.Screen name="Modal" component={ModalScreen} />
        </Stack.Group>
