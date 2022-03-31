@@ -1,7 +1,23 @@
 import React, { useState } from 'react';
 import { ImageBackground, View, Text, StyleSheet, TouchableOpacity, TextInput, Platform } from 'react-native';
+import {App} from '../App';
+import registerRootComponent from 'expo/build/launch/registerRootComponent';
+
+import { StatusBar } from 'expo-status-bar';
+
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import useCachedResources from '../hooks/useCachedResources';
+import useColorScheme from '../hooks/useColorScheme';
+import Navigation from '../navigation';
+
 
 const API_URL = Platform.OS === 'web' ? 'http://localhost:19007' : 'http://localhost:19007';
+var loggedIn = false; 
+export function varIsLogin() {
+    return loggedIn;
+  }
+
 
 const AuthScreen = () => {
 
@@ -13,9 +29,30 @@ const AuthScreen = () => {
     const [message, setMessage] = useState('');
     const [isLogin, setIsLogin] = useState(true);
 
+
     const onChangeHandler = () => {
+       
         setIsLogin(!isLogin);
-        setMessage('HI');
+        loggedIn = isLogin;
+        setMessage('HI' + loggedIn);
+        registerRootComponent(App);
+        //App();
+
+//        const isLoadingComplete = useCachedResources();
+//   const colorScheme = useColorScheme();
+
+//   if (!isLoadingComplete) {
+//     return null;
+//   } else {
+//     return (
+//       <SafeAreaProvider>
+//         <Navigation colorScheme={colorScheme} />
+//         <StatusBar />
+//       </SafeAreaProvider>
+//     );
+//   }
+
+            
     };
 
     const onLoggedIn = token => {
@@ -79,10 +116,33 @@ const AuthScreen = () => {
         return status + message;
     }
 
+    // return (
+    //     <ImageBackground source={require('../public/images/gradient-back.jpeg')} style={styles.image}>
+    //         <View style={styles.card}>
+    //             <Text style={styles.heading}>{isLogin ? 'Unichef Login' : 'Unichef Signup'}</Text>
+    //             <View style={styles.form}>
+    //                 <View style={styles.inputs}>
+    //                     <TextInput style={styles.input} placeholder="Email" autoCapitalize="none" onChangeText={setEmail}></TextInput>
+    //                     {!isLogin && <TextInput style={styles.input} placeholder="Name" onChangeText={setName}></TextInput>}
+    //                     <TextInput secureTextEntry={true} style={styles.input} placeholder="Password" onChangeText={setPassword}></TextInput>
+    //                     <Text style={[styles.message, {color: isError ? 'red' : 'green'}]}>{message ? getMessage() : null}</Text>
+    //                     <TouchableOpacity style={styles.button} onPress={onSubmitHandler}>
+    //                         <Text style={styles.buttonText}>Done</Text>
+    //                     </TouchableOpacity>
+    //                     <TouchableOpacity style={styles.buttonAlt} onPress={onChangeHandler}>
+    //                         <Text style={styles.buttonAltText}>{isLogin ? 'Sign Up' : 'Log In'}</Text>
+    //                     </TouchableOpacity>
+    //                 </View>    
+    //             </View>
+    //         </View>
+    //     </ImageBackground>
+    // );
+
+
     return (
         <ImageBackground source={require('../public/images/gradient-back.jpeg')} style={styles.image}>
             <View style={styles.card}>
-                <Text style={styles.heading}>{isLogin ? 'Login' : 'Signup'}</Text>
+                <Text style={styles.heading}>{isLogin ? 'Unichef Login' : 'Unichef Signup'}</Text>
                 <View style={styles.form}>
                     <View style={styles.inputs}>
                         <TextInput style={styles.input} placeholder="Email" autoCapitalize="none" onChangeText={setEmail}></TextInput>
@@ -92,7 +152,13 @@ const AuthScreen = () => {
                         <TouchableOpacity style={styles.button} onPress={onSubmitHandler}>
                             <Text style={styles.buttonText}>Done</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonAlt} onPress={onChangeHandler}>
+                        <TouchableOpacity style={styles.buttonAlt} onPress={    onChangeHandler
+
+    }>
+               {/* <SafeAreaProvider>
+         <Navigation colorScheme={colorScheme} />
+         <StatusBar />
+      </SafeAreaProvider> */}
                             <Text style={styles.buttonAltText}>{isLogin ? 'Sign Up' : 'Log In'}</Text>
                         </TouchableOpacity>
                     </View>    
