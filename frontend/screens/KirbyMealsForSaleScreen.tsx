@@ -62,7 +62,7 @@ export default function KirbyMealsForSaleScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#000000',
+    backgroundColor: '#ffffe0',
   },
   title: {
     marginTop: 70,
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
 },
 
 header:{
-  backgroundColor: "#00008b",
+  backgroundColor: "#df7077",
   height: 180,
 },
 

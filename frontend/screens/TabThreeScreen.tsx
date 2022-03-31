@@ -267,8 +267,11 @@ export default function TabThreeScreen({ navigation }: RootTabScreenProps<'TabTh
 
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#ffffe0",
+  },
   header:{
-    backgroundColor: "#00008b",
+    backgroundColor: "#df7077",
     height:200,
   },
   profile: {

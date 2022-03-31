@@ -280,7 +280,7 @@ import { StyleSheet,
   TouchableOpacity, 
   ScrollView,
   LayoutAnimation,
-  Platform, UIManager, Button, Alert} from 'react-native';
+  Platform, UIManager, Button, Alert, ImageBackground} from 'react-native';
 import {ExpandableListView} from 'react-native-expandable-listview';
 
 import EditScreenInfo from '../components/EditScreenInfo';
@@ -304,6 +304,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       <View style={styles.header}>
       <Text style={styles.title}>UniChefs</Text>
       </View>
+      <ImageBackground source={{uri: 'https://wallpapercave.com/wp/wp8279629.jpg',}} style={styles.image}>
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
       <Text style={styles.general}> Cook time: 30 minutes </Text>{"\n"}
@@ -446,6 +447,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       
       
       {/* </Text> */}
+    </ImageBackground>
     </ScrollView>
   );
 }
@@ -453,10 +455,14 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#ffffe0",
+  },
   title: {
     marginTop: 100,
     fontSize: 50,
     fontWeight: 'bold',
+    alignSelf: 'center',
     color: '#FFFFFF',
     justifyContent: 'center'
   },
@@ -480,7 +486,7 @@ const styles = StyleSheet.create({
   collapsible: {
     marginTop: 10,
     backgroundColor: "#301934",
-    color: "#FFFFFF",
+    color: "##FFFFF",
     cursor: "pointer",
     paddingHorizontal: 70,
     fontSize: 15,
@@ -496,7 +502,7 @@ const styles = StyleSheet.create({
   },
   
   header:{
-    backgroundColor: "#00008b",
+    backgroundColor: "#df7077",
     height: 180,
   },
 
@@ -530,7 +536,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     display: 'flex',
     height: 300,
-    width: 250,
+    width: 400,
   },
 
   buttonContainer: {
@@ -562,12 +568,19 @@ const styles = StyleSheet.create({
   RectangleShapeView: {
  
     marginTop: 20,
-    width: 500,
+    width: 700,
     height: 500,
     alignSelf: 'center',
     backgroundColor: '#CCCCFF'
  
   },
+
+  image: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+}
 
   
  

@@ -57,7 +57,7 @@ export default function VeggieFriedRiceReviewsScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#000000',
+    backgroundColor: "#ffffe0",
   },
   title: {
     marginTop: 70,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
 },
 
 header:{
-  backgroundColor: "#00008b",
+  backgroundColor: "#df7077",
   height: 180,
 },
 
@@ -100,7 +100,7 @@ RectangleShapeView: {
     width: 800,
     height: 850,
     alignSelf: 'center',
-    backgroundColor: '#E6E6FA'
+    backgroundColor: "#F8F8F8",
  
   },
 

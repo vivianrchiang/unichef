@@ -87,8 +87,9 @@ export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabOne'
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F5FCFF',
+    backgroundColor: "#ffffe0",
   },
+
   title: {
     marginTop: 100,
     fontSize: 50,
@@ -139,7 +140,7 @@ appButtonText: {
 },
 
 header:{
-  backgroundColor: "#00008b",
+  backgroundColor: "#df7077",
   height: 180,
 }
 });
