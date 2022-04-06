@@ -19,11 +19,11 @@ export default function KirbyRecipesScreen({ navigation }: RootTabScreenProps<'T
     <View style={styles.RectangleShapeView}>
       <View style={styles.RectangleShapeView2}> 
       
-      <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
+      <Text style={styles.name}> Teriyaki Stir-fry </Text> {"\n"}{"\n"}
       <Text style={styles.general}> Cook time: 30 minutes </Text> {"\n"}
       <Image style={styles.imgView}
         source={{
-          uri: 'https://www.dinneratthezoo.com/wp-content/uploads/2016/10/veggie-fried-rice-6.jpg',
+          uri: 'https://www.connoisseurusveg.com/wp-content/uploads/2018/12/teriyaki-tofu-5-of-5.jpg',
         }}
       />
 
@@ -67,7 +67,7 @@ export default function KirbyRecipesScreen({ navigation }: RootTabScreenProps<'T
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#000000',
+    backgroundColor: "#ffffe0",
   },
   title: {
     marginTop: 70,
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
 },
 
 header:{
-  backgroundColor: "#00008b",
+  backgroundColor: "#df7077",
   height: 180,
 },
 imgView:{
@@ -170,7 +170,7 @@ RectangleShapeView: {
     marginBottom:20,
     width:250,
     borderRadius:30,
-    backgroundColor: "#EE4B2B",
+    backgroundColor: "#0FA973",
   },
 
   appButtonText: {
