@@ -40,7 +40,7 @@ export default function CreateRecipePostScreen({ navigation }: RootTabScreenProp
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#FFFFBF',
+    backgroundColor: '#ffffe0',
   },
   title: {
     marginTop: 70,

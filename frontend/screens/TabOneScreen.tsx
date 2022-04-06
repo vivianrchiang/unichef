@@ -304,7 +304,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       <View style={styles.header}>
       <Text style={styles.title}>UniChefs</Text>
       </View>
-      <ImageBackground source={{uri: 'https://wallpapercave.com/wp/wp8279629.jpg',}} style={styles.image}>
+      <ImageBackground source={{uri: '',}} style={styles.image}>
         <View style={styles.RectangleShapeView}>
         <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
       <Text style={styles.general}> Cook time: 30 minutes </Text>{"\n"}

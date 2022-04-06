@@ -24,6 +24,11 @@ export default function TabTwoScreen({ navigation }: RootTabScreenProps<'TabOne'
 
               {"\n"}
               {"\n"}
+              {"\n"}
+              {"\n"}
+              {"\n"}
+              {"\n"}
+              {"\n"}
       <View style={styles.wrapper}>
             <View>
                 <View style={{flexDirection:"row"}}>

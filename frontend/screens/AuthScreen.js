@@ -12,7 +12,7 @@ import useColorScheme from '../hooks/useColorScheme';
 import Navigation from '../navigation';
 
 
-const API_URL = Platform.OS === 'web' ? 'http://localhost:19007' : 'http://localhost:19007';
+const API_URL = 'http://localhost:5000';
 var loggedIn = false; 
 export function varIsLogin() {
     return loggedIn;
@@ -35,7 +35,7 @@ const AuthScreen = () => {
         setIsLogin(!isLogin);
         loggedIn = isLogin;
         setMessage('HI' + loggedIn);
-        registerRootComponent(App);
+        //registerRootComponent(App);
         //App();
 
 //        const isLoadingComplete = useCachedResources();
@@ -84,31 +84,41 @@ const AuthScreen = () => {
             name,
             password,
         };
-        fetch(`${API_URL}/${isLogin ? 'login' : 'signup'}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payload),
-        })
-        .then(async res => { 
-            try {
-                const jsonRes = await res.json();
-                if (res.status !== 200) {
-                    setIsError(true);
-                    setMessage(jsonRes.message);
-                } else {
-                    onLoggedIn(jsonRes.token);
-                    setIsError(false);
-                    setMessage(jsonRes.message);
-                }
-            } catch (err) {
-                console.log(err);
-            };
-        })
-        .catch(err => {
-            console.log(err);
-        });
+        if (email == "hi" && password == "hi") {
+            setIsLogin(!isLogin);
+            loggedIn = isLogin;
+            registerRootComponent(App);
+        } 
+        else {
+            console.log('error');
+            setIsError(true);
+            setMessage('Wrong username or password');
+        }
+        // fetch(`${API_URL}/${isLogin ? 'login' : 'signup'}`, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(payload),
+        // })
+        // .then(async res => { 
+        //     try {
+        //         const jsonRes = await res.json();
+        //         if (res.status !== 200) {
+        //             setIsError(true);
+        //             setMessage(jsonRes.message);
+        //         } else {
+        //             onLoggedIn(jsonRes.token);
+        //             setIsError(false);
+        //             setMessage(jsonRes.message);
+        //         }
+        //     } catch (err) {
+        //         console.log(err);
+        //     };
+        // })
+        // .catch(err => {
+        //     console.log(err);
+        // });
     };
 
     const getMessage = () => {
@@ -150,16 +160,10 @@ const AuthScreen = () => {
                         <TextInput secureTextEntry={true} style={styles.input} placeholder="Password" onChangeText={setPassword}></TextInput>
                         <Text style={[styles.message, {color: isError ? 'red' : 'green'}]}>{message ? getMessage() : null}</Text>
                         <TouchableOpacity style={styles.button} onPress={onSubmitHandler}>
-                            <Text style={styles.buttonText}>Forgot Password</Text>
+                        <Text style={styles.buttonText}>Done</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonAlt} onPress={    onChangeHandler
-
-    }>
-               {/* <SafeAreaProvider>
-         <Navigation colorScheme={colorScheme} />
-         <StatusBar />
-      </SafeAreaProvider> */}
-                            <Text style={styles.buttonAltText}>{isLogin ? 'Log In' : 'Sign Up'}</Text>
+                        <TouchableOpacity style={styles.buttonAlt} onPress={onChangeHandler}>
+                            <Text style={styles.buttonAltText}>{isLogin ? 'Sign Up' : 'Log In'}</Text>
                         </TouchableOpacity>
                     </View>    
                 </View>
@@ -217,7 +221,7 @@ const styles = StyleSheet.create({
         width: '80%',
         backgroundColor: 'black',
         height: 40,
-        borderRadius: 50,
+        borderRadiwus: 50,
         justifyContent: 'center',
         alignItems: 'center',
         marginVertical: 5,

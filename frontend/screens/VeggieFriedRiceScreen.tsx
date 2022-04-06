@@ -91,7 +91,7 @@ RectangleShapeView: {
     width: 600,
     height: 450,
     alignSelf: 'center',
-    backgroundColor: '#CCCCFF'
+    backgroundColor: '#E6E6FA'
  
   },
 
@@ -101,7 +101,7 @@ RectangleShapeView: {
     width: 600,
     height: 450,
     alignSelf: 'center',
-    backgroundColor: '#CCCCFF'
+    backgroundColor: '#E6E6FA'
  
   },
 
