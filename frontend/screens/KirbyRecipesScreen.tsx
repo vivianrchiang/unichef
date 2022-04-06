@@ -18,6 +18,7 @@ export default function KirbyRecipesScreen({ navigation }: RootTabScreenProps<'T
 
     <View style={styles.RectangleShapeView}>
       <View style={styles.RectangleShapeView2}> 
+      
       <Text style={styles.name}> Veggie Fried Rice </Text> {"\n"}{"\n"}
       <Text style={styles.general}> Cook time: 30 minutes </Text> {"\n"}
       <Image style={styles.imgView}
@@ -66,7 +67,7 @@ export default function KirbyRecipesScreen({ navigation }: RootTabScreenProps<'T
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ffffe0',
+    backgroundColor: '#000000',
   },
   title: {
     marginTop: 70,
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
 },
 
 header:{
-  backgroundColor: "#df7077",
+  backgroundColor: "#00008b",
   height: 180,
 },
 imgView:{

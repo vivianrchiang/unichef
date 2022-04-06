@@ -80,10 +80,10 @@ header:{
 RectangleShapeView: {
  
     marginTop: 20,
-    width: 800,
-    height: 500,
+    width: 700,
+    height: 450,
     alignSelf: 'center',
-    backgroundColor: '#D3D3D3',
+    backgroundColor: '#E6E6FA',
     borderColor: "#808080"
  
   },
@@ -92,7 +92,7 @@ RectangleShapeView: {
  
     marginTop: 20,
     width: 550,
-    height: 500,
+    height: 450,
     alignSelf: 'center',
     backgroundColor: '#FFFFFF'
  
@@ -138,7 +138,7 @@ RectangleShapeView: {
     marginBottom:20,
     width:250,
     borderRadius:30,
-    backgroundColor: "#228B22",
+    backgroundColor: "#00008b",
   },
 
   appButtonText: {
@@ -174,7 +174,6 @@ RectangleShapeView: {
 ingredients: {
     width: '80%',
     borderBottomWidth: 1,
-    borderBottomColor: 'black',
     backgroundColor: '#F5F5F5',
     marginTop: 20,
     paddingTop: 0,

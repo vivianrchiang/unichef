@@ -479,7 +479,7 @@ const styles = StyleSheet.create({
     borderWidth: 20,
     borderColor: "#696969",
     borderRadius: 5,
-    backgroundColor: "#D3D3D3",
+    backgroundColor: "#FFFFFF",
     color: "#696969",
   },
 
@@ -571,7 +571,7 @@ const styles = StyleSheet.create({
     width: 700,
     height: 500,
     alignSelf: 'center',
-    backgroundColor: '#CCCCFF'
+    backgroundColor: '#E6E6FA'
  
   },
 

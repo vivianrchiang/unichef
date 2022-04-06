@@ -51,6 +51,11 @@ export default function VeggieFriedRiceScreen() {
 }
 
 const styles = StyleSheet.create({
+
+  container: {
+    backgroundColor: "#ffffe0"
+  },
+  
   title: {
     marginTop: 70,
     fontSize: 50,
