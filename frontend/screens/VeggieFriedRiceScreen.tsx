@@ -55,13 +55,14 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#ffffe0"
   },
-  
+
   title: {
     marginTop: 70,
     fontSize: 50,
     fontWeight: 'bold',
     color: '#FFFFFF',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
 
   secondTitle: {
@@ -91,7 +92,7 @@ RectangleShapeView: {
     width: 600,
     height: 450,
     alignSelf: 'center',
-    backgroundColor: '#CCCCFF'
+    backgroundColor: '#E6E6FA'
  
   },
 
@@ -101,7 +102,7 @@ RectangleShapeView: {
     width: 600,
     height: 450,
     alignSelf: 'center',
-    backgroundColor: '#CCCCFF'
+    backgroundColor: '#E6E6FA'
  
   },
 

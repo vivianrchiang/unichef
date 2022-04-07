@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
     fontSize: 50,
     fontWeight: 'bold',
     color: '#FFFFFF',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
 
   secondTitle: {
@@ -100,7 +101,7 @@ RectangleShapeView: {
     width: 800,
     height: 850,
     alignSelf: 'center',
-    backgroundColor: "#F8F8F8",
+    backgroundColor: "#E6E6FA",
  
   },
 

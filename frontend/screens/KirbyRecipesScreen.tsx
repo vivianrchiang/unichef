@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
     fontSize: 50,
     fontWeight: 'bold',
     color: '#FFFFFF',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignSelf: "center"
   },
 
   secondTitle: {
